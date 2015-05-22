@@ -122,6 +122,7 @@ CREATE TABLE Sach (
 
 
 
+
 -- Table: TacGia
 insert into TacGia (MaTG,HoDem,TenTG) 
 values (N'T01',N'Nguyá»…n VÄƒn',N'HoĂ ng');
