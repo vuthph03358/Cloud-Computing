@@ -1,0 +1,166 @@
+-- tables
+-- Table: Chitiethoadon
+Insert into Chitiethoadon(Mahoadon,MaSach,Soluong,ThanhTien)
+values (N'M01',N'S01',1,150000);
+Insert into Chitiethoadon(Mahoadon,MaSach,Soluong,ThanhTien)
+values (N'M02',N'S02',2,500000);
+Insert into Chitiethoadon(Mahoadon,MaSach,Soluong,ThanhTien)
+values (N'M03',N'S03',3,750000);
+Insert into Chitiethoadon(Mahoadon,MaSach,Soluong,ThanhTien)
+values (N'M04',N'S04',4,200000);
+Insert into Chitiethoadon(Mahoadon,MaSach,Soluong,ThanhTien)
+values (N'M05',N'S05',5,150000);
+
+CREATE TABLE Chitiethoadon (
+    Mahoadon nvarchar  NOT NULL,
+    MaSach nvarchar  NOT NULL,
+    Soluong INT  NOT NULL,
+    ThanhTien money  NOT NULL,
+    CONSTRAINT Chitiethoadon_pk PRIMARY KEY (Mahoadon)
+)
+;
+
+
+
+
+
+-- Table: HoaDon
+Insert into HoaDon (Mahoadon,MaKH,NgayTao)
+values (N'M01',N'K01','9/20/2014');
+Insert into HoaDon (Mahoadon,MaKH,NgayTao)
+values (N'M02',N'K02','9/20/2014');
+Insert into HoaDon (Mahoadon,MaKH,NgayTao)
+values (N'M03',N'K03','9/20/2014');
+Insert into HoaDon (Mahoadon,MaKH,NgayTao)
+values (N'M04',N'K04','9/20/2014');
+Insert into HoaDon (Mahoadon,MaKH,NgayTao)
+values (N'M05',N'K05','9/20/2014');
+CREATE TABLE HoaDon (
+    Mahoadon nvarchar  NOT NULL,
+    MaKH nvarchar  NOT NULL,
+    NgayTao nvarchar  NOT NULL,
+    CONSTRAINT HoaDon_pk PRIMARY KEY (Mahoadon)
+)
+;
+
+
+
+
+
+-- Table: KhachHang
+insert into KhachHang(MaKH,TenKH,Diachi,SDT)
+values (N'K01',N'ThĂºy Háº¡nh',N'HĂ  Ná»™i',N'0988988889');
+insert into KhachHang(MaKH,TenKH,Diachi,SDT)
+values (N'K02',N'Äá»©c PhĂºc',N'Ninh BĂ¬nh',N'0988988888');
+insert into KhachHang(MaKH,TenKH,Diachi,SDT)
+values (N'K03',N'Thanh BĂ¬nh',N'ÄĂ  Láº¡t',N'0988988899');
+insert into KhachHang(MaKH,TenKH,Diachi,SDT)
+values (N'K04',N'TÆ°á»ng Minh',N'HĂ  Ná»™i',N'0988988999');
+insert into KhachHang(MaKH,TenKH,Diachi,SDT)
+values (N'K05',N'Má»¹ Lá»‡',N'SĂ i GĂ²n',N'0988988989');
+
+CREATE TABLE KhachHang (
+    MaKH nvarchar  NOT NULL,
+    TenKH nvarchar  NOT NULL,
+    Diachi nvarchar  NOT NULL,
+    SDT nvarchar  NOT NULL,
+    CONSTRAINT KhachHang_pk PRIMARY KEY (MaKH)
+)
+;
+
+
+
+
+
+-- Table: PhanLoaiSach
+Insert into PhanLoaiSach(MaTheloai,TenTheloai)
+values (N'TL01',N'Khoa há»c thÆ°á»ng thá»©c');
+Insert into PhanLoaiSach(MaTheloai,TenTheloai)
+values (N'TL02',N'Kinh doanh');
+Insert into PhanLoaiSach(MaTheloai,TenTheloai)
+values (N'TL03',N'áº¨m thá»±c');
+Insert into PhanLoaiSach(MaTheloai,TenTheloai)
+values (N'TL04',N'Thá»ƒ thao');
+Insert into PhanLoaiSach(MaTheloai,TenTheloai)
+values (N'TL05',N'Khoa há»c tá»± nhiĂªn');
+CREATE TABLE PhanLoaiSach (
+    MaTheloai nvarchar  NOT NULL,
+    TenTheloai nvarchar  NOT NULL,
+    CONSTRAINT PhanLoaiSach_pk PRIMARY KEY (MaTheloai)
+)
+;
+
+
+
+
+
+-- Table: Sach
+insert into Sach(MaSach,MaTheloai,TieuDe,NgayXB,GiaSach,BinhLuan)
+values (N'S01',N'TL01',N'NGĂ€Y Má»I NÄ‚NG Äá»˜NG','2/3/2008',150000,N'Hay vĂ  bá»• Ă­ch');
+insert into Sach(MaSach,MaTheloai,TieuDe,NgayXB,GiaSach,BinhLuan)
+values (N'S02',N'TL05',N'THIĂN NHIĂN KĂŒ THĂ','4/5/2011',250000,N'Ráº¥t thĂº vá»‹');
+insert into Sach(MaSach,MaTheloai,TieuDe,NgayXB,GiaSach,BinhLuan)
+values (N'S03',N'TL03',N'áº¨M THá»°C Bá»N MĂ™A','8/5/2012',350000,null);
+insert into Sach(MaSach,MaTheloai,TieuDe,NgayXB,GiaSach,BinhLuan)
+values (N'S04',N'TL02',N'BĂ QUYáº¾T KINH DOANH','7/9/2013',50000,N'ChĂ¬a khĂ³a thĂ nh cĂ´ng');
+insert into Sach(MaSach,MaTheloai,TieuDe,NgayXB,GiaSach,BinhLuan)
+values (N'S05',N'TL04',N'Tá»° Há»ŒC YOGA','9/9/2014',30000,N'Dá»… thá»±c hĂ nh');
+insert into Sach(MaSach,MaTheloai,TieuDe,NgayXB,GiaSach,BinhLuan)
+values (N'S06',N'TL02',N'kinh te report','9/9/2014',30000,null);
+CREATE TABLE Sach (
+    MaSach nvarchar  NOT NULL,
+    MaTheloai nvarchar  NOT NULL,
+    TieuDe nvarchar  NOT NULL,
+    NgayXB datetime  NOT NULL,
+    GiaSach money  NOT NULL,
+    BinhLuan nvarchar  NOT NULL,
+    CONSTRAINT Sach_pk PRIMARY KEY (MaSach)
+)
+;
+
+
+
+
+
+-- Table: TacGia
+insert into TacGia (MaTG,HoDem,TenTG) 
+values (N'T01',N'Nguyá»…n VÄƒn',N'HoĂ ng');
+insert into TacGia (MaTG,HoDem,TenTG) 
+values (N'T02',N'Nguyá»…n PhÆ°Æ¡ng',N'Lan');
+insert into TacGia (MaTG,HoDem,TenTG) 
+values (N'T03',N'Nguyá»…n VÄƒn',N'VĂµ');
+insert into TacGia (MaTG,HoDem,TenTG) 
+values (N'T04',N'Nguyá»…n VÄƒn',N'ThĂ´ng');
+insert into TacGia (MaTG,HoDem,TenTG) 
+values (N'T05',N'Nguyá»…n VÄƒn',N'Äá»©c');
+CREATE TABLE TacGia (
+    TenTG nvarchar  NOT NULL,
+    HoDem nvarchar  NOT NULL,
+    CONSTRAINT TacGia_pk PRIMARY KEY (TenTG)
+)
+;
+
+
+
+
+
+
+
+
+
+-- foreign keys
+-- Reference:  product_purchase_item (table: KhachHang)
+
+
+ALTER TABLE KhachHang ADD CONSTRAINT product_purchase_item 
+    FOREIGN KEY (Diachi)
+    REFERENCES TacGia (TenTG)
+;
+
+-- Reference:  purchase_purchase_item (table: KhachHang)
+
+
+ALTER TABLE KhachHang ADD CONSTRAINT purchase_purchase_item 
+    FOREIGN KEY (TenKH)
+    REFERENCES Sach (MaSach)
+;
